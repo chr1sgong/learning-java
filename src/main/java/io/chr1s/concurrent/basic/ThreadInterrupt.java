@@ -1,4 +1,4 @@
-package io.chr1s.multithread.basic;
+package io.chr1s.concurrent.basic;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
