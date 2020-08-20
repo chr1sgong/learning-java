@@ -1,5 +1,7 @@
 package io.chr1s.basic;
 
+import java.util.HashMap;
+
 public class FinalTest {
 
     private final int i;
@@ -10,6 +12,7 @@ public class FinalTest {
 
     public static void main(String[] args) {
         FinalTest test = new FinalTest();
+        HashMap
         System.out.print(test.i);
     }
 }

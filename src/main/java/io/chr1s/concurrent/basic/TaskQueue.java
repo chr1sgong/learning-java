@@ -1,7 +1,5 @@
 package io.chr1s.concurrent.basic;
 
-import javafx.concurrent.Task;
-
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -12,9 +10,9 @@ public class TaskQueue {
 
     private static final int MAX_TASK = 100;
 
-    private BlockingQueue<Task> queue = new LinkedBlockingQueue<>();
+    private BlockingQueue<Runnable> queue = new LinkedBlockingQueue<>();
 
-    public void putTask(Task task) throws InterruptedException {
+    public void putTask(Runnable task) throws InterruptedException {
         queue.put(task);
     }
 
