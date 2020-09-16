@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>algorithms</artifactId>
+    <artifactId>design-pattern</artifactId>
 
-    <name>algorithms</name>
+    <name>design-pattern</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -74,18 +74,5 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <compilerArguments>
-                        <extdirs>lib</extdirs>
-                    </compilerArguments>
-                </configuration>
-            </plugin>
-        </plugins>
-
     </build>
 </project>
