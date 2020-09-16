@@ -7,6 +7,12 @@
   <groupId>io.chr1s</groupId>
   <artifactId>learning-java</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>algorithms</module>
+    <module>algorithms</module>
+  </modules>
 
   <name>learning-java</name>
   <!-- FIXME change it to the project's website -->
