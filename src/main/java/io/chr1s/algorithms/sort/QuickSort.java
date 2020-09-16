@@ -1,4 +1,4 @@
-package io.chr1s.algorithms;
+package io.chr1s.algorithms.sort;
 
 public class QuickSort {
 

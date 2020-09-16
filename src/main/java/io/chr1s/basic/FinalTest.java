@@ -12,7 +12,6 @@ public class FinalTest {
 
     public static void main(String[] args) {
         FinalTest test = new FinalTest();
-        HashMap
         System.out.print(test.i);
     }
 }
