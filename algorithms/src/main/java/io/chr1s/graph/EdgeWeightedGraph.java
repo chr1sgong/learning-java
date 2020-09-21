@@ -30,7 +30,12 @@ public class EdgeWeightedGraph {
      * @param in
      */
     public EdgeWeightedGraph(In in) {
-
+        this(in.readInt());
+        int edges = in.readInt();
+        for (int i = 0; i < edges; i++) {
+            Edge e = new Edge(in.readInt(), in.readInt(), in.readDouble());
+            addEdge(e);
+        }
     }
 
     /**
@@ -51,8 +56,6 @@ public class EdgeWeightedGraph {
 
     /**
      * 向图中添加一条边
-     * @param v
-     * @param w
      */
     public void addEdge(Edge e) {
         int v = e.either();
@@ -68,7 +71,7 @@ public class EdgeWeightedGraph {
      * @return
      */
     public Iterable<Edge> adj(int v) {
-
+        return edges[v];
     }
 
     /**
@@ -76,7 +79,13 @@ public class EdgeWeightedGraph {
      * @return
      */
     public Iterable<Edge> edges() {
-
+        Bag<Edge> b = new Bag<>();
+        for (int v = 0; v < V; v++) {
+            for (Edge e : adj(v)) {
+                if (e.other(v) > v) b.add(e);
+            }
+        }
+        return b;
     }
 
     /**
@@ -85,6 +94,6 @@ public class EdgeWeightedGraph {
      */
     @Override
     public String toString() {
-
+        return "EdgeWeightedGraph";
     }
 }

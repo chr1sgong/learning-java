@@ -20,7 +20,6 @@ public class SCC {
         this.map = new ArrayList<>();
         for (int v = 0; v < G.V(); v++) {
             onStack[v] = true;
-            map.get(v) = new Bag<>();
             dfs(G, v);
         }
     }
@@ -29,7 +28,6 @@ public class SCC {
         for (int w : G.adj(v)) {
             if (!onStack[w]) {
                 onStack[w] = true;
-                map[v].add(w);
                 dfs(G, w);
                 onStack[w] = false;
             }
@@ -43,7 +41,7 @@ public class SCC {
      * @return
      */
     public boolean stronglyConnected(int v, int w) {
-        return map[v].
+        return false;
     }
 
     /**
@@ -51,7 +49,7 @@ public class SCC {
      * @return
      */
     public int count() {
-        return
+        return 0;
     }
 
     /**
@@ -60,7 +58,7 @@ public class SCC {
      * @return
      */
     public int id(int v) {
-        return id[v];
+        return 0;
     }
 
 
