@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-    public static int[] sort(int[] nums) {
+    public int[] sort(int[] nums) {
         if (nums == null || nums.length <= 1) {
             return nums;
         }
@@ -15,7 +15,7 @@ public class MergeSort {
         return merge(sort(leftSub), sort(rightSub));
     }
 
-    private static int[] merge(int[] nums1, int[] nums2) {
+    private int[] merge(int[] nums1, int[] nums2) {
         int[] ans = new int[nums1.length + nums2.length];
         int idx = 0;
         int i = 0, j = 0;
@@ -43,8 +43,9 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
+        MergeSort mergeSort = new MergeSort();
         int[] nums = new int[] {1,3,2,5,7,9,10,3,5,7,20,111,14,12};
-        int[] sortedNums = sort(nums);
+        int[] sortedNums = mergeSort.sort(nums);
         for (int num : sortedNums) {
             System.out.print(num + " ");
         }
