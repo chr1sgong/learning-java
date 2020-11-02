@@ -1,6 +1,6 @@
-package io.chr1s.designpattern.pubsub;
+package io.chr1s.pubsub;
 
-public class Message extends Post {
+public class Message extends io.chr1.pubsub.Post {
     Message(String message) {
         super(message);
     }

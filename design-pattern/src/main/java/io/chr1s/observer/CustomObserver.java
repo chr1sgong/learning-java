@@ -1,4 +1,4 @@
-package io.chr1s.designpattern.observer;
+package io.chr1s.observer;
 
 public interface CustomObserver {
 

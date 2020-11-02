@@ -1,4 +1,4 @@
-package io.chr1s.designpattern;
+package io.chr1s;
 
 public class Singleton {
 

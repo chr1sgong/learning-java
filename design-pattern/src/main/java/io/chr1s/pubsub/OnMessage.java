@@ -1,4 +1,4 @@
-package io.chr1s.designpattern.pubsub;
+package io.chr1s.pubsub;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package io.chr1s.designpattern.pubsub;
+package io.chr1.pubsub;
 
 public abstract class Post {
 

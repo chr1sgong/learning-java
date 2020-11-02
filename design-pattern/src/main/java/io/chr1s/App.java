@@ -8,6 +8,7 @@ public class App
 {
     public static void main( String[] args )
     {
+        Singleton.getInstance();
         System.out.println( "Hello World!" );
     }
 }

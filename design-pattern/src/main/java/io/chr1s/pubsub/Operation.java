@@ -1,4 +1,4 @@
-package io.chr1s.designpattern.pubsub;
+package io.chr1s.pubsub;
 
 import java.lang.annotation.Annotation;
 import java.lang.ref.WeakReference;
@@ -15,7 +15,7 @@ public class Operation extends Event {
         channels.get(channelName).put(subscriber.hashCode(), new WeakReference<>(subscriber));
     }
 
-    void publish(String channelName, Post message) {
+    void publish(String channelName, io.chr1.pubsub.Post message) {
         for (Map.Entry<Integer, WeakReference<Object>> subs : channels.get(channelName).entrySet()) {
             WeakReference<Object> subscribeRef = subs.getValue();
             Object subscribeObj = subscribeRef.get();
@@ -28,7 +28,7 @@ public class Operation extends Event {
         }
     }
 
-    <T, P extends Post> boolean deliverMessage(T subscriber, Method method, Post message) {
+    <T, P extends io.chr1.pubsub.Post> boolean deliverMessage(T subscriber, Method method, io.chr1.pubsub.Post message) {
         try {
             boolean methodFound = false;
             for (final Class paramClass : method.getParameterTypes()) {
