@@ -1,9 +1,9 @@
 package io.chr1s.graph;
 
-import edu.princeton.cs.algs4.In;
-import edu.princeton.cs.algs4.ST;
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algorithms.ST;
+import edu.princeton.cs.introcs.In;
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
 
 public class SymbolGraph {
 

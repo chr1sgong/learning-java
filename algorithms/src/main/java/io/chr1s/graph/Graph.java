@@ -1,6 +1,6 @@
 package io.chr1s.graph;
 
-import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.introcs.In;
 
 import java.io.IOException;
 import java.util.ArrayList;
