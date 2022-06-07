@@ -18,20 +18,8 @@ public class HeapSort {
     }
 
     private static void buildMaxHeap(int[] nums) {
-        for (int i = nums.length / 2 - 1; i >= 0; --i) {
-            int largest = i;
-            int l = left(largest);
-            int r = right(largest);
-            if (l < nums.length && nums[l] > nums[largest]) {
-                largest = l;
-            }
-            if (r < nums.length && nums[r] > nums[largest]) {
-                largest = r;
-            }
-            if (largest != i) {
-                swap(nums, largest, i);
-                maxHeapify(nums, largest, nums.length);
-            }
+        for (int i = nums.length / 2; i >= 0; --i) {
+            maxHeapify(nums, i, nums.length);
         }
     }
 
