@@ -25,7 +25,6 @@ public class RemoveKDigits {
                 stack.pop();
                 deleted++;
             }
-            if (deleted == k) break;
             if (stack.isEmpty() && c == '0') {
                 deleted++;
             } else {
