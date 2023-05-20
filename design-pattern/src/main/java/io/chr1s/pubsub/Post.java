@@ -1,4 +1,4 @@
-package io.chr1.pubsub;
+package io.chr1s.pubsub;
 
 public abstract class Post {
 

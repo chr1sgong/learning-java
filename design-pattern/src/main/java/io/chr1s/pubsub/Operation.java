@@ -4,18 +4,17 @@ import java.lang.annotation.Annotation;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Method;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class Operation extends Event {
 
     void subscribe(String channelName, Object subscriber) {
-        if (!channels.containsKey(channelName)) {
-            channels.put(channelName, new ConcurrentHashMap<>());
-        }
+//        if (!channels.containsKey(channelName)) {
+//            channels.put(channelName, new ConcurrentHashMap<>());
+//        }
         channels.get(channelName).put(subscriber.hashCode(), new WeakReference<>(subscriber));
     }
 
-    void publish(String channelName, io.chr1.pubsub.Post message) {
+    void publish(String channelName, Post message) {
         for (Map.Entry<Integer, WeakReference<Object>> subs : channels.get(channelName).entrySet()) {
             WeakReference<Object> subscribeRef = subs.getValue();
             Object subscribeObj = subscribeRef.get();
@@ -28,7 +27,7 @@ public class Operation extends Event {
         }
     }
 
-    <T, P extends io.chr1.pubsub.Post> boolean deliverMessage(T subscriber, Method method, io.chr1.pubsub.Post message) {
+    <T, P extends Post> boolean deliverMessage(T subscriber, Method method, Post message) {
         try {
             boolean methodFound = false;
             for (final Class paramClass : method.getParameterTypes()) {
