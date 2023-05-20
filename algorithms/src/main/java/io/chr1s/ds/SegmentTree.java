@@ -1,9 +1,6 @@
 package io.chr1s.ds;
 
 import java.util.Arrays;
-import java.util.StringJoiner;
-
-import javax.swing.text.Segment;
 
 /**
  * Representation of Segment Tree
@@ -11,7 +8,7 @@ import javax.swing.text.Segment;
  * 2. Each internal node represents some merging of the leaf nodes. The merging may be different for different problems.
  *
  * An array representation of tree is used to represent Segment Trees.
- * For each node at index i, the left child is at index 2 * i + 1, right child at 2 * i + 2,
+ * For each node at index i (0-based), the left child is at index 2 * i + 1, right child at 2 * i + 2,
  * and the parent is at (i - 1) / 2.
  *
  * Segment tree is not a complete binary. It is a full binary tree (every node has 0 or 2 children) and all levels are
@@ -26,7 +23,6 @@ public class SegmentTree<E> {
     private E[] data;   // raw data
     private Merge<E> merge;
 
-
     /**
      * Construct a segment tree from an array.
      * every time we divide the current segment into two halves, and call the same procedure on both halves,
@@ -35,11 +31,14 @@ public class SegmentTree<E> {
      * @param arr
      * @param
      */
-    public SegmentTree(E[] arr) {
+    private SegmentTree(E[] arr) {
 
     }
 
     public SegmentTree(E[] arr, Merge<E> merge) {
+        if (merge == null) {
+            throw new IllegalArgumentException("merge is null");
+        }
         this.merge = merge;
         int n = arr.length;
         data = Arrays.copyOf(arr, n);

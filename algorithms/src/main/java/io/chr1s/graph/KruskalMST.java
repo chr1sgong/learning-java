@@ -1,9 +1,6 @@
 package io.chr1s.graph;
 
-
-import edu.princeton.cs.algorithms.*;
-import edu.princeton.cs.introcs.In;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.*;
 
 /**
  * Kruskal 算法

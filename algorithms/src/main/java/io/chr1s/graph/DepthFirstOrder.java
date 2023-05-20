@@ -1,7 +1,7 @@
 package io.chr1s.graph;
 
-import edu.princeton.cs.algorithms.Queue;
-import edu.princeton.cs.algorithms.Stack;
+import edu.princeton.cs.algs4.Queue;
+import edu.princeton.cs.algs4.Stack;
 
 public class DepthFirstOrder {
 

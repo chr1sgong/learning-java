@@ -2,15 +2,8 @@ package io.chr1s.leetcode;
 
 public class MinNumberDispeared {
 
-    public int minNumberdisappered (int[] arr) {
+    public int minNumberDisappeared (int[] arr) {
         // write code here
-//        int max = -1;
-//        for (int i = 0; i < arr.length; i++) {
-//            max = Math.max(max, arr[i]);
-//        }
-//        for (int i = 0; i < max; i++) {
-//
-//        }
 
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == i+1) continue;
@@ -28,6 +21,6 @@ public class MinNumberDispeared {
     }
 
     public static void main(String[] args) {
-        System.out.println("res: " + new MinNumberDispeared().minNumberdisappered(new int[] {1,2,3,5}));
+        System.out.println("res: " + new MinNumberDispeared().minNumberDisappeared(new int[] {1,2,3,5}));
     }
 }

@@ -1,8 +1,8 @@
 package io.chr1s.graph;
 
-import edu.princeton.cs.introcs.In;
-import edu.princeton.cs.algorithms.Stack;
-import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.Stack;
+import edu.princeton.cs.algs4.StdOut;
 
 import java.io.IOException;
 import java.util.LinkedList;
